@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackMyFunds - Profile</title>
+    <link rel="stylesheet" href="accounts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="accounts.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1>TrackMyFunds</h1>
+            <div class="logo">$</div>
+          </div>
+       
+        <a href="dashboard.html" class="nav-item" ><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+        <a href="history.html" class="nav-item"><i class="fas fa-history"></i>History</a>
+        <a href="accounts.html" class="nav-item"><i class="fas fa-user"></i>Accounts</a>
+        <a href="plans.html" class="nav-item"><i class="fas fa-chart-line"></i> Plans</a>
+        <a href="addexpense.html" class="nav-item"><i class="fas fa-plus-circle"></i> Add Expense</a>
+        <a href="report.html" class="nav-item"><i class="fas fa-file-alt"></i>Report</a>
+        <a href="aboutus.html" class="nav-item"><i class="fas fa-info-circle"></i>About Us</a>
+    </nav>
+
+    <main class="main-content">
+        <header class="header">
+            <input type="search" placeholder="Search for something" class="search-bar">
+        </header>
+
+        <section class="profile-section">
+            <h2 class="profile-header">Edit Profile</h2>
+            <form id="profileForm">
+                <img src="img1.jpeg" alt="Profile" class="profile-image">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" id="userName" name="userName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Present Address</label>
+                        <input type="text" id="presentAddress" name="presentAddress" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Permanent Address</label>
+                        <input type="text" id="permanentAddress" name="permanentAddress" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Postal Code</label>
+                        <input type="text" id="postalCode" name="postalCode" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" id="country" name="country" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="save-btn">Save</button>
+            </form>
+        </section>
+    </main>
+
+    
+</body>
+</html>

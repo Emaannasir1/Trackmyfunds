@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackMyFunds - Smart Financial Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #6F16DB;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30vh;
+            background: #fff;
+            border-radius: 100% 100% 0 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #4d2672;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .hero {
+            display: flex;
+            padding: 5% 5%;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            flex: 1;
+            color: white;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .quote {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            font-style: italic;
+            color: #000000;
+        }
+
+        .stats {
+            text-align: center;
+            color: #2C3E50;
+            margin-top: 2rem;
+        }
+
+        .stats h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .app-preview {
+            flex: 1;
+            position: relative;
+        }
+
+        .phone-mockup {
+            background: white;
+            border-radius: 2rem;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            transform: rotate(-5deg);
+        }
+
+        .phone-header {
+            margin-bottom: 1rem;
+        }
+
+        .ready-amount {
+            background: #E8FFE8;
+            color: #28A745;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .expense-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .expense-category {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .expense-amount {
+            font-weight: 600;
+        }
+
+        .money-emoji {
+            position: fixed;
+            font-size: 2rem;
+            pointer-events: none;
+            z-index: 2;
+            transition: all 3s linear;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 2rem;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .phone-mockup {
+                transform: rotate(0);
+                margin-top: 2rem;
+            }
+
+            .wave {
+                height: 20vh;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <span>💰</span>
+            TrackMyFunds
+        </div>
+        <div class="nav-buttons">
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='Signin.html'">Sign In</button>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='Signup.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Do Money Differently</h1>
+            <p class="hero-subtitle">Enjoy guilt-free spending and effortless saving with a friendly, flexible method for managing your finances.</p>
+            <button type="button" class="btn btn-primary" onclick="window.location.href='Signin.html'">Welcome</button>
+            
+            <div class="quote">
+                "TrackMyFunds isn't just a tool for money management. It's a tool for self-actualization."
+            </div>
+            <div class="stats">
+                <h2>The average TMF user saves $600 in 2 months and $6,000 their first year</h2>
+                <p>And we don't like to play favorites or anything, but you seem well above average to us. Are you ready to be our next success story?</p>
+            </div>
+        </div>
+
+        <div class="app-preview">
+            <div class="phone-mockup">
+                <div class="phone-header">
+                    <h3>This Month</h3>
+                </div>
+                <div class="ready-amount">
+                    <span>Ready to Assign</span>
+                    <span>$1,000</span>
+                </div>
+                <div id="expense-list">
+                    <!-- Expenses will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="wave"></div>
+
+    <script>
+        // Sample expense data
+        const expenses = [
+            { category: 'Monthly', amount: 1200, icon: '🏠' },
+            { category: 'Mortgage', amount: 1200, icon: '🏦' },
+            { category: 'Electric', amount: 450, icon: '⚡' },
+            { category: 'Phone', amount: 70, icon: '📱' },
+            { category: 'Vacation', amount: 1850, icon: '✈️' },
+            { category: 'New Laptop', amount: 625, icon: '💻' }
+        ];
+
+        // Add expenses with animation delay
+        const expenseList = document.getElementById('expense-list');
+        expenses.forEach((expense, index) => {
+            setTimeout(() => {
+                const div = document.createElement('div');
+                div.className = 'expense-item';
+                div.innerHTML = `
+                    <div class="expense-category">
+                        <span>${expense.icon}</span>
+                        <span>${expense.category}</span>
+                    </div>
+                    <span class="expense-amount">$${expense.amount}</span>
+                `;
+                expenseList.appendChild(div);
+            }, index * 300);
+        });
+
+        // Floating money animation
+        function createFloatingMoney() {
+            const moneyEmojis = ['💵', '💰', '💸'];
+            const money = document.createElement('div');
+            money.className = 'money-emoji';
+            money.textContent = moneyEmojis[Math.floor(Math.random() * moneyEmojis.length)];
+            
+            // Starting position
+            money.style.left = `${Math.random() * 100}vw`;
+            money.style.top = '100vh';
+            
+            document.body.appendChild(money);
+
+            // Animate upward
+            requestAnimationFrame(() => {
+                money.style.transform = `translate(
+                    ${(Math.random() - 0.5) * 200}px,
+                    ${-window.innerHeight - 100}px
+                ) rotate(${Math.random() * 360}deg)`;
+            });
+
+            // Remove after animation
+            setTimeout(() => money.remove(), 3000);
+        }
+
+        // Create new money emoji every 200ms
+        setInterval(createFloatingMoney, 200);
+    </script>
+</body>
+</html>

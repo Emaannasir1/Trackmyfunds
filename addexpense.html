@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrackMyFunds</title>
+  <link rel="stylesheet" href="addexpense.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="dashboard.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>TrackMyFunds</h1>
+        <div class="logo">$</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+          <li><a href="accounts.html"><i class="fas fa-user"></i> Accounts</a></li>
+          <li><a href="plans.html"><i class="fas fa-chart-line"></i> Plans</a></li>
+          <li><a href="addexpense.html"><i class="fas fa-plus-circle"></i> Add Expense</a></li>
+          <li><a href="report.html"><i class="fas fa-file-alt"></i> Report</a></li>
+          <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!DOCTYPE html>
+
+
+<div class="transaction-form">
+  <h2>Add cash transaction</h2>
+  <div class="transaction-type">
+    <button id="expenseBtn" class="active">Expense</button>
+  </div>
+  <form id="cashTransactionForm">
+    <label>
+      <span>Amount</span>
+      <input type="number" name="amount" required placeholder="£">
+    </label>
+    <label>
+      <span>Merchant</span>
+      <input type="text" name="merchant" required placeholder="Merchant">
+    </label>
+    <label>
+      <span>Category</span>
+      <input type="text" name="category" required placeholder="Category">
+    </label>
+    <label>
+      <span>Date</span>
+      <input type="date" name="date" required>
+    </label>
+    <label>
+      <span>Account</span>
+      <select name="account" required>
+        <option value="cash">My cash account (£0.00)</option>
+        <!-- Add other accounts as needed -->
+      </select>
+    </label>
+    <label>
+      <span>Note (optional)</span>
+      <textarea name="note" placeholder="Add a note..."></textarea>
+    </label>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

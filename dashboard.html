@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrackMyFunds</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>TrackMyFunds</h1>
+        <div class="logo">$</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+          <li><a href="accounts.html"><i class="fas fa-user"></i> Accounts</a></li>
+          <li><a href="plans.html"><i class="fas fa-chart-line"></i> Plans</a></li>
+          <li><a href="addexpense.html"><i class="fas fa-plus-circle"></i> Add Expense</a></li>
+          <li><a href="report.html"><i class="fas fa-file-alt"></i> Report</a></li>
+          <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <header>
+        <h2 id="page-title">Dashboard</h2>
+        <div class="header-right">
+          <div class="search-bar">
+            <input type="search" placeholder="Search for something">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="icons">
+            <i class="fas fa-cog"></i>
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="user-avatar">
+            <img src="https://via.placeholder.com/40" alt="User Avatar">
+          </div>
+        </div>
+      </header>
+      <div id="content">
+        <!-- Content for each section will be loaded here -->
+        <div id="content">
+          <div id="dashboard">
+            <h2>Spending Overview</h2>
+            <div class="chart-container">
+              <canvas id="spendingChart"></canvas>
+            </div>
+            <div class="summary">
+              <div class="summary-item">
+                <h3>Total Spent</h3>
+                <p>$3,240</p>
+              </div>
+              <div class="summary-item">
+                <h3>Average per Month</h3>
+                <p>$540</p>
+              </div>
+              <div class="summary-item">
+                <h3>Highest Month</h3>
+                <p>October ($800)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
